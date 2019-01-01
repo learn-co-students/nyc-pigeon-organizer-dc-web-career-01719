@@ -7,6 +7,7 @@ def nyc_pigeon_organizer(data)
   
   ## CREATES KEYS FOR FINAL HASH
   data.each {|description, value|
+  
   value.each {|array, bird|
   bird.each {|name|
   organized_data[name] = {color: [], gender: [], lives: []}
@@ -14,6 +15,7 @@ def nyc_pigeon_organizer(data)
   }
   }
   
+
   ## FILLS IN COLORS
   
   all_bird_names = organized_data.keys 
@@ -36,6 +38,7 @@ def nyc_pigeon_organizer(data)
   }
   }
   }
+  
   data[:lives].each {|city, names|
   names.each {|name|
   all_bird_names.each {|bird_name|
@@ -45,6 +48,5 @@ def nyc_pigeon_organizer(data)
   }
   }
   }
-
 organized_data
 end
